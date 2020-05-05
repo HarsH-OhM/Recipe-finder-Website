@@ -24,16 +24,13 @@ class Contact extends Component{
 				<h4>We would love to hear from you !</h4>
 
                <div class="find-widget">
-                 Developer:  <a href="#">Hariom Malviya</a>
+                 Developer:  <p>Hariom Malviya</p>
                 </div>
                 <div class="find-widget">
-                 Address: <a href="#">Lovely professional university, BH:5</a>
+                 Address: <p>Lovely professional university, BH:5</p>
                 </div>
                 <div class="find-widget">
-                  Phone:  <a href="#">+91-9340012366</a>
-                </div>
-                <div class="find-widget">
-                  Email:  <a href="#">gurjarhariom3114@gmail.com</a>
+                  Email:  <p>gurjarhariom3114@gmail.com</p>
                 </div>
                 
                 <div class="find-widget">
@@ -42,12 +39,13 @@ class Contact extends Component{
                 
 			</div>
 		</div>
+
 		<div class="col-md-9">
 			<div class="contact-form">
 				<div class="form-group">
 				  <label class="control-label col-sm-2" for="fname">First Name:</label>
 				  <div class="col-sm-10">          
-					<input type="text" class="form-control" id="fname" placeholder="Enter First Name" name="fname" required data-error="Please enter your name"/>
+					<input   type="text" class="form-control" id="fname" placeholder="Enter First Name" name="fname" required data-error="Please enter your name"/>
 				  <div class="help-block with-errors"></div>
           </div>
           
@@ -65,7 +63,7 @@ class Contact extends Component{
 				<div class="form-group">
 				  <label class="control-label col-sm-2" for="email">Email:</label>
 				  <div class="col-sm-10">
-					<input type="email" class="form-control" id="email" placeholder="Enter email" name="email"/>
+					<input     type="email" class="form-control" id="email" placeholder="Enter email" name="email"/>
 				  </div>
 				</div>
 				<div class="form-group">
@@ -74,7 +72,7 @@ class Contact extends Component{
 					<textarea class="form-control" rows="5" id="test-mailing"
         	name="test-mailing"
         	onChange={this.handleChange}
-        	placeholder="Post some lorem ipsum here"
+        	placeholder="please write... what you really want to share with  us."
         	required
         	value={this.state.feedback}></textarea>
 				  </div>
