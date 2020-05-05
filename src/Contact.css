@@ -1,5 +1,9 @@
 body{
-    background-color: #25274d;
+    /* background-color: #25274d; */
+    /* background: linear-gradient(0deg, #ff6a00 0%, #ee0979 100%); */
+    background-image: url("./img/coverlite2.jpg");
+    
+    
 }
 .contact{
     padding: 4%;
