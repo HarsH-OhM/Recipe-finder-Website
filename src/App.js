@@ -1,7 +1,14 @@
+
 import React, { useEffect, useState } from 'react';
+
 
 import './App.css';
 import Recipe from './Recipe';
+import style from './recipe.module.css';
+import Contact from './Contact';
+import { Link, Router, Switch } from 'react-router-dom';
+import { render } from '@testing-library/react';
+import { useHistory } from 'react-router-dom'
 
 
 const App = () => {
@@ -11,7 +18,14 @@ const App = () => {
 
   const [recipes,setRecipes] = useState([]);                // to store all recipe data from api
   const [search, setSearch] = useState("");                  //to store the input search from search bar
-  const [query,setQuery] = useState('chicken');           // to store queary which we gonna submit from search bar.               
+  const [query,setQuery] = useState('pasta');           // to store queary which we gonna submit from search bar.               
+  
+
+  
+  // function handleButtonClick() {
+  //   let history = useHistory();    //Hooks can only be called inside the body of a function component.
+  //   history.push('/Contact');
+  // }
 
   useEffect( () => {
    getRecipes();
@@ -40,32 +54,72 @@ const App = () => {
 
   const getSearch = e => {             //event for onChange submit button
     e.preventDefault();       //to stop the page refresh
-    setQuery(search);           
+    setQuery(search);      
+    setSearch('');         //to clear the input search after returning the data     
   }
 
+
   return(
-    <div className="App">
+
       
+
+    <div className="App">
+      <div class="pos-f-t">
+  <div class="collapse" id="navbarToggleExternalContent">
+    <div class="bg-blue p-4">    
+    {/* "bg-dark p-4" */}
+      <h5 class="text-black h4">Go to Other pages:</h5>
+      
+
+      <hr />
+      
+      <ul>
+      <li><a href='/'className="nav-link"> Home </a></li>
+            <li><a href='/contact' className="nav-link">Contact</a></li>
+            <li><a href='/About' className="nav-link">About</a></li>
+           
+          </ul>
+                   
+    </div>
+  </div>
+  <nav class="navbar navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+</div>
+
+
         <form onSubmit={getSearch} className="search-form">
-          <input className="search-bar" type="text" value={search} onChange={updateSearch}></input>
+          <input className="search-bar" type="text"  value={search} onChange={updateSearch}></input>
           <button className="search-button" type="submit">search</button>
-          <p>info about your search will be render here..</p>
-
-
-
+          
         </form>
+
+   
+        
+
+        
+        <div className="recipes">
         {recipes.map(recipe =>(                                 //to map the array of recipe object from api
         <Recipe  
         key={recipe.recipe.label}
         title={recipe.recipe.label} 
         calories={recipe.recipe.calories} 
-        image={recipe.recipe.image}/>
+        image={recipe.recipe.image}
+        ingredients ={recipe.recipe.ingredients}
+        />
         ))};
+
+        </div>
       
     </div>
-  );
 
+
+  );
+        
 };
+
 
 export default App;
 
