@@ -1,6 +1,10 @@
 .App{
   min-height: 100vh;
-  background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%);
+   /* background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%); */
+   /* background-image: linear-gradient(-225deg, #69EACB 0%, #EACCF8 48%, #6654F1 100%); */
+    background-image: url("./img/foodcover.jpg"); 
+  
+
 }
 .search-form{
   min-height: 10vh;
@@ -26,7 +30,34 @@
 }
 
 .recipes{
+border-radius: 10px;
   display: flex;
-  justify-content:space-around;
+ 
+  justify-content: space-evenly;
   flex-wrap: wrap;
+
+}
+
+.link{
+  text-align: center;
+  text-decoration-color: red;
+  
+  text-underline-position: below;
+  text-decoration: solid;
+  font-style: italic;
+
+}.nav-link{
+  color:black;
+  font-weight: 900;
+  font-size: x-large;
+  
+  
+}
+.collapse{
+
+  
+  background-image: linear-gradient( 135deg, #FDD819 10%, #E80505 100%);
+  /* background-image: url("./img/coverlite2.jpg"); */
+  
+  
 }
