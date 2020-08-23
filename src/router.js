@@ -1,15 +1,15 @@
 import React from "react";
-import Contact from "./Contact";
+import Contact from "./components2/Contact";
 import App from './App';
-import Home from './Home';
-import About from './About';
+import Home from './components2/Home';
+import About from './components2/About';
 
 
 
 const routes = {
-  "/": () => <Home/>,
+  "/App": () => <App/>,
 
-  "/App": () => <App />,
+  "/Home": () => <Home />,
   
   "/contact": () => <Contact />,
 

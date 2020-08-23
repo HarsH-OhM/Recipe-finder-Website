@@ -12,7 +12,7 @@ import { useHistory } from 'react-router-dom'
 
 
 
-const App = () => {
+const food = () => {
 
   const APP_ID = "c2eb042e";
   const APP_KEY = "1ae3878d815f7a051ee2faa1207b0975";
@@ -122,51 +122,6 @@ const App = () => {
 
         };
 
-export default App;
+export default food;
 
 //its flow of data like we are storing and fetching the data from api in usestate and getrecipes function then we are maping it. then returning it.
-
-
-
-// import React, { Component} from 'react';
-// import { BrowserRouter, Route, Switch } from 'react-router-dom';
-
-// import 'bootstrap/dist/css/bootstrap.min.css';
- 
-// import Home from './components2/Home';
-// import About from './components2/About';
-// import Contact from './components2/Contact';
-// // import Error from './components2/Error';
-//  import food from './food';
-// import Navigation from './components2/Navigation';
- 
-// class App extends Component {
-//   render() {
-//     return (      
-//        <BrowserRouter>
-//         <div>
-//           <Navigation />
-//             <Switch>
-//                 <ul className="header">
-//              <li><Route path="/" component={Home} exact/></li>
-//             <li> <Route path="/food" component={food} /></li>
-//             <li> <Route path="/about" component={About}/></li>
-//             <li><Route path="/contact" component={Contact}/></li>
-//             <Route component={Error}/>
-
-//             </ul>
-            
-//            </Switch>
-
-//            {/* <div className="content">
-//             <Route path="/" component={Home}/>
-//             <Route path="/about" component={About}/>
-//             <Route path="/contact" component={Contact}/>
-//           </div> */}
-//         </div> 
-//       </BrowserRouter>
-//     );
-//   }
-// }
- 
-// export default App;

@@ -82,7 +82,7 @@ class Contact extends Component{
 					<button type="submit" class="btn btn-default" onClick={this.handleSubmit}>Submit</button>
           </div><br/>
           <div class="col-sm-offset-2 col-sm-10">
-            <a href="/">Back to Home</a>
+            <a href="/Home">Back to Home</a>
           </div>
 				  
 				</div>

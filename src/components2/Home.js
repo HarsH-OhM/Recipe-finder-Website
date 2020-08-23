@@ -1,18 +1,21 @@
 
-import React from 'react';
+import React, { Component }from 'react';
 
+import { Link } from 'react-router-dom';
 import './Home.css';
-import first from './img/first.jpg';
-import second from './img/second.jpg';
-import third from './img/third.jpg';
-import food1 from './img/food1.jpg';
-import food2 from './img/food2.jpg';
-import food3 from './img/food3.jpg';
+import first from '../img/first.jpg';
+import second from '../img/second.jpg';
+import third from '../img/third.jpg';
+import food1 from '../img/food1.jpg';
+import food2 from '../img/food2.jpg';
+import food3 from '../img/food3.jpg';
 import About from './About';
 import Contact from './Contact';
 
+class Home extends Component{
 
-const Home = () => {
+  render(){
+
 return(
         
 
@@ -31,13 +34,14 @@ return(
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
+          
             <a class="nav-link" href="/About">About us</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="/contact">Contact</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/App">SearchBar</a>
+            <a class="nav-link" href="{{'/App'}}">SearchBar</a>
           </li>
         </ul>
       </div>
@@ -136,8 +140,13 @@ return(
           
 
           </div>
+         
 );
-};
+
+}
+
+}
+
 
 
 export  default Home;

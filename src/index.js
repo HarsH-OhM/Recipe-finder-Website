@@ -5,13 +5,18 @@ import './index.css';
 import App from './App';
 
 import * as serviceWorker from './serviceWorker';
-import Contact from './Contact';
+import Contact from './components2/Contact';
 import Recipe from './Recipe';
 import routes from './router';
+
+import About from './components2/About';
+import Home from './components2/Home';
+
 
 
 
 import {useRoutes, A} from 'hookrouter';
+
 
 // const routing = (
 //     <Router>
@@ -46,7 +51,7 @@ function Show() {
 
  
 
-ReactDOM.render(<Show />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

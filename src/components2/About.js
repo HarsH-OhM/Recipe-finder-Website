@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react';
 import './About.css';
-import mine from './img/mine.JPG';
+import mine from '../img/mine.JPG';
 
 
 
@@ -33,7 +33,7 @@ class About extends Component{
     
     <div id="navbarSupportedContent" class="collapse navbar-collapse">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item active"><a href="/" class="nav-link font-italic"> Home </a></li>
+        <li class="nav-item active"><a href="/Home" class="nav-link font-italic"> Home </a></li>
         <li class="nav-item active"><a href="/About" class="nav-link font-italic"> About </a></li>
         <li class="nav-item active"><a href="/contact" class="nav-link font-italic"> Contact</a></li>
         <li class="nav-item active"><a href="/App" class="nav-link font-italic">SearchBar</a></li>
